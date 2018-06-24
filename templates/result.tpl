@@ -1,5 +1,8 @@
-% rebase('templates/base.tpl')
+% rebase('templates/base.tpl', use_bokeh=True)
 <div>
-  <h3>アワビの特徴は、性別{{ sex }}、殻長{{ length }}mm、殻幅{{ diameter }}mm、高さ{{ height }}mm、重さ{{ weight }}グラムですね</h3>
-  <h3>このアワビの推定年齢は{{ age }}歳です</h3>
+  <h3>アワビの特徴は、性別{{ abalone.sex_str }}、殻長{{ abalone.length }}mm、殻幅{{ abalone.diameter }}mm、高さ{{ abalone.height }}mm、重さ{{ abalone.weight }}グラムですね</h3>
+  <h3>このアワビの推定年齢は{{ abalone.age }}歳です</h3>
+</div>
+<div>
+  {{ !graph }}
 </div>
